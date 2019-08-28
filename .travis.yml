@@ -4,7 +4,7 @@ jdk:
 
 addons:
   sonarcloud:
-    organization: "KotlinUtils"
+    organization: "Metifikys"
     token:
       secure: "a884da4407fe5b248ce932381585b6aa430d49f7"
 
