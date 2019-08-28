@@ -7,15 +7,19 @@ import org.junit.jupiter.api.Assertions.*
 
 internal class FilesKtTest {
 
+    private val emptyFile = "FileTest/EmptyFile.txt".getFileFromResources()
+    private val notEmpty = "FileTest/NotEmptyFile.txt".getFileFromResources()
+
+
     @org.junit.jupiter.api.Test
     fun isEmpty() {
-        val empty = "FileTest/EmptyFile.txt".getFileFromResources().isEmpty()
-        assertTrue(empty)
+        assertTrue(emptyFile.isEmpty())
+        assertFalse(emptyFile.notEmpty())
     }
 
     @org.junit.jupiter.api.Test
     fun notEmpty() {
-        val empty = "FileTest/NotEmtyFile.txt".getFileFromResources().notEmpty()
-        assertTrue(empty)
+        assertTrue(notEmpty.notEmpty())
+        assertFalse(notEmpty.isEmpty())
     }
 }
