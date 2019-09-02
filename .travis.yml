@@ -9,7 +9,7 @@ addons:
       secure: "laFlgOnMktDrWv7vVFDVzlrKwmgSUra0pMOzJc2PNpes/N7RFnTPCtyhZQvN3E0ANLLeKVOfcRbr2ht5VzwXX3u4KdqjGH8WTrAsjf1wqSb19MlvVMxCC17DsYbl7pbioj3Dp0wOMdOqbjBS3ghGwz0n8BxR3/6JP4YpwLhGRYBCTJTxMPT8chYY96ba5OX3zC+r1VQEabA6D/nswyxwYa6iUVzupbDwOQKijFNR6FKx1V6OqNpeo7ueOZONUT4DcGL60QJSNF5RoIJ839RoAT9WxXG1hTbIjF45rdHl/QXBp2Xz0cU9qIIMtSb4EfS3uQBBzpUwFXlfEDQfVkHzX9+7594GcDf0GO0GoNcJfWkrX7/YLmKfCEd+bB0EeaHQhoWuc5GhGhxVrjzFLTlPMkQuzHgQQ/ZpWGdqBLg7L/oRIcfjVegZZqFDH9qty4BMze8V/9cb7eipUWqFmKywsU50vdDzIZqh5B0HGIy1lip4QMTLKuLIHRQsgZfO7gVNoXRtDJdZvIWCsr3OHMT7dVfLGl/B8y6iMtWA5ryqw9BJTb1MzDtq2FkxxUR8RRy31ppZens9+2i9xB3XGqv9IQ37tlUrFNk11IYDxjW9bhSGjNEtuVySpSkRpf3Qfr6TG797Xks1YesFCtdV2hULkdayQ7BGF/uD8oHFG6v4PgA="
 
 script:
-  - mvn clean verify sonar:sonar -Pcoverage -Dsonar.projectKey=Metifikys_KotlinUtils
+  - mvn clean verify sonar:sonar -Dsonar.projectKey=Metifikys_KotlinUtils
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
